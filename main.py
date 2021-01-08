@@ -122,7 +122,7 @@ Builder.load_string("""
                     size_hint_y: None
                     height: 200
                     padding: 10
-                    input_filter: lambda text, from_undo: text[:4 - len(a.text)]  
+                    input_filter: lambda text, from_undo: text[:3 - len(a.text)]  
                     
             BoxLayout:
                 cols: 2
@@ -146,7 +146,7 @@ Builder.load_string("""
                     size_hint_y: None
                     height: 200
                     padding: 10          
-                    input_filter: lambda text, from_undo: text[:4 - len(b.text)]  
+                    input_filter: lambda text, from_undo: text[:3 - len(b.text)]  
                     
             BoxLayout:
                 cols: 2
@@ -170,7 +170,7 @@ Builder.load_string("""
                     size_hint_y: None
                     height: 200
                     padding: 10          
-                    input_filter: lambda text, from_undo: text[:4 - len(c.text)]
+                    input_filter: lambda text, from_undo: text[:3 - len(c.text)]
                     
             BoxLayout:
                 cols: 2
