@@ -249,7 +249,7 @@ class Quadratic_Formula_Solver(Screen):
                 self.ids.list_of_steps.add_widget(Label(text= "POSITIVE" ,font_size = 60, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                ac = "-" + str(4*float(a)*float(c))
+                ac = " - " + str(4*float(a)*float(c))
                 ac = ac.replace("--"," + ")
                 b = str(float(b)**2)
                 
@@ -277,7 +277,7 @@ class Quadratic_Formula_Solver(Screen):
                 self.ids.list_of_steps.add_widget(Label(text= "NEGATIVE" ,font_size = 60, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                ac = "-" + str(4*float(a)*float(c))
+                ac = " - " + str(4*float(a)*float(c))
                 ac = ac.replace("--"," + ")
                 b = str(float(b)**2)
                 
