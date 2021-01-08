@@ -122,7 +122,7 @@ Builder.load_string("""
                     size_hint_y: None
                     height: 200
                     padding: 10
-                    input_filter: lambda text, from_undo: text[:5 - len(a.text)]  
+                    input_filter: lambda text, from_undo: text[:4 - len(a.text)]  
                     
             BoxLayout:
                 cols: 2
@@ -146,7 +146,7 @@ Builder.load_string("""
                     size_hint_y: None
                     height: 200
                     padding: 10          
-                    input_filter: lambda text, from_undo: text[:5 - len(b.text)]  
+                    input_filter: lambda text, from_undo: text[:4 - len(b.text)]  
                     
             BoxLayout:
                 cols: 2
@@ -170,7 +170,7 @@ Builder.load_string("""
                     size_hint_y: None
                     height: 200
                     padding: 10          
-                    input_filter: lambda text, from_undo: text[:5 - len(c.text)]
+                    input_filter: lambda text, from_undo: text[:4 - len(c.text)]
                     
             BoxLayout:
                 cols: 2
@@ -249,24 +249,25 @@ class Quadratic_Formula_Solver(Screen):
                 self.ids.list_of_steps.add_widget(Label(text= "POSITIVE" ,font_size = 60, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                ac = str(4*float(a)*float(c)).replace(".0","")
+                ac = str(4*float(a)*float(c))
                 ac = ac.replace("--"," + ")
-                b = str(float(b)**2).replace(".0","")
+                b = str(float(b)**2)
                 
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + ac + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + str(square).replace(".0","") + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + str(square) + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                squared = str(square**.5).replace(".0","")
+                squared = str(square**.5)
                 print("squared",squared)
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + " + squared + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                numer = str(float(b_out) + float(squared)).replace(".0","")
+                numer = str(float(b_out) + float(squared))
                 self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                denom = str(2 * float(a)).replace(".0","")
+                denom = str(2 * float(a))
                 self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                     " + denom ,font_size = 60, size_hint_y= None, height=300))
                 
-                answera = str(float(numer) / float(denom)).replace(".0","")
+                answera = str(float(numer) / float(denom))
+                print("answera",answera)
                 self.ids.list_of_steps.add_widget(Label(text="x = " + answera ,font_size = 60, size_hint_y= None, height=150))
                 self.layouts.append(layout)
                 self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = 60, size_hint_y= None, height=150))
@@ -276,24 +277,25 @@ class Quadratic_Formula_Solver(Screen):
                 self.ids.list_of_steps.add_widget(Label(text= "NEGATIVE" ,font_size = 60, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                ac = "-" + str(4*float(a)*float(c)).replace(".0","")
+                ac = "-" + str(4*float(a)*float(c))
                 ac = ac.replace("--"," + ")
-                b = str(float(b)**2).replace(".0","")
+                b = str(float(b)**2)
                 
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b +  ac + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + str(square).replace(".0","") + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + str(square) + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                squared = str(square**.5).replace(".0","")
+                squared = str(square**.5)
                 print("squared",squared)
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - " + squared + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                numer = str(float(b_out) - float(squared)).replace(".0","")
+                numer = str(float(b_out) - float(squared))
                 self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
-                denom = str(2 * float(a)).replace(".0","")
+                denom = str(2 * float(a))
                 self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                     " + denom ,font_size = 60, size_hint_y= None, height=300))
                 
-                answerb = str(float(numer) / float(denom)).replace(".0","")
+                answerb = str(float(numer) / float(denom))
+                print("answerb",answerb)
                 self.ids.list_of_steps.add_widget(Label(text="x = " + answerb ,font_size = 60, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = 60, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text="FINAL ANSWER ",font_size = 60, size_hint_y= None, height=100))
