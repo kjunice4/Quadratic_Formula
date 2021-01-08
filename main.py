@@ -122,7 +122,7 @@ Builder.load_string("""
                     size_hint_y: None
                     height: 200
                     padding: 10
-                    input_filter: lambda text, from_undo: text[:3 - len(a.text)]  
+                    input_filter: lambda text, from_undo: text[:5 - len(a.text)]  
                     
             BoxLayout:
                 cols: 2
@@ -146,7 +146,7 @@ Builder.load_string("""
                     size_hint_y: None
                     height: 200
                     padding: 10          
-                    input_filter: lambda text, from_undo: text[:3 - len(b.text)]  
+                    input_filter: lambda text, from_undo: text[:5 - len(b.text)]  
                     
             BoxLayout:
                 cols: 2
@@ -170,7 +170,7 @@ Builder.load_string("""
                     size_hint_y: None
                     height: 200
                     padding: 10          
-                    input_filter: lambda text, from_undo: text[:3 - len(c.text)]
+                    input_filter: lambda text, from_undo: text[:5 - len(c.text)]
                     
             BoxLayout:
                 cols: 2
@@ -294,10 +294,11 @@ class Quadratic_Formula_Solver(Screen):
                 self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                     " + denom ,font_size = 60, size_hint_y= None, height=300))
                 
                 answerb = str(float(numer) / float(denom)).replace(".0","")
-                self.ids.list_of_steps.add_widget(Label(text="x = " + answerb ,font_size = 60, size_hint_y= None, height=150))
+                self.ids.list_of_steps.add_widget(Label(text="x = " + answerb ,font_size = 60, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = 60, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text="FINAL ANSWER ",font_size = 60, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text="x = (" + answera + ", " + answerb + ")",font_size = 60, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="x = " + answera,font_size = 60, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="x = " + answerb,font_size = 60, size_hint_y= None, height=100))
                 self.layouts.append(layout)
                 
             
