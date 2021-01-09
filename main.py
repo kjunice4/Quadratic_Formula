@@ -250,7 +250,7 @@ class Quadratic_Formula_Solver(Screen):
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
                 ac = " - " + str(4*float(a)*float(c))
-                ac = ac.replace("--"," + ")
+                ac = ac.replace("- -","+ ")
                 b = str(float(b)**2)
                 
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + ac + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
@@ -272,13 +272,18 @@ class Quadratic_Formula_Solver(Screen):
                 self.layouts.append(layout)
                 self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = 60, size_hint_y= None, height=150))
                 
+                a = str(entry_list[0])
+                b_out = "-" + str(entry_list[1])
+                b_out = b_out.replace("--","")
+                b = str(entry_list[1])
+                c = str(entry_list[2])
                 
                 #NEGATIVE
                 self.ids.list_of_steps.add_widget(Label(text= "NEGATIVE" ,font_size = 60, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
                 
                 ac = " - " + str(4*float(a)*float(c))
-                ac = ac.replace("--"," + ")
+                ac = ac.replace("- -","+ ")
                 b = str(float(b)**2)
                 
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b +  ac + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 60, size_hint_y= None, height=300))
