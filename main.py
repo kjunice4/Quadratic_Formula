@@ -17,26 +17,92 @@ Builder.load_string("""
         Button:
             background_normal: "KSquared_Logo.png"
             on_release:
-                app.root.current = "Quadratic_Formula_Solver"
+                app.root.current = "Menu"
                 root.manager.transition.direction = "left" 
                 
         Button:
-            font_size: 60
+            font_size: 50
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 200
-            text: "KSquared Quadratic Formula Solver"
+            text: "KSquared Quadratic Formula Calculator"
             on_release:
-                app.root.current = "Quadratic_Formula_Solver"
+                app.root.current = "Menu"
                 root.manager.transition.direction = "left" 
+""")
 
+# Menu
+Builder.load_string("""
+<Menu>
+    id:Menu
+    name:"Menu"
+    
+    ScrollView:
+        name: "Scroll"
+        do_scroll_x: False
+        do_scroll_y: True
+        
+        GridLayout:
+            cols: 1
+            padding:10
+            spacing:10
+            size_hint: 1, None
+            width:200
+            height: self.minimum_height
+            
+            Label:
+                font_size: 75
+                size_hint_y: None
+                height: 200
+                padding: 10, 10
+                text: "Menu"
+            
+            Button:
+                text: "Quadratic Formula Calculator"   
+                font_size: 75
+                background_color: 0, 0 , 1 , 1
+                size_hint_y: None
+                height: 200
+                padding: 10, 10
+                on_release:
+                    app.root.current = "Quadratic_Formula_Solver"
+                    root.manager.transition.direction = "left" 
+                    
+            Button:
+                font_size: 75
+                background_color: 0, 0 , 0 , 1
+                size_hint_y: None
+                height: 400
+                text: "Visit KSquared,LLC"
+                on_release:
+                    import webbrowser
+                    webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc')
+            Button:
+                font_size: 75
+                background_color: 0, 0 , 0 , 1
+                size_hint_y: None
+                height: 400
+                text: "Other apps from KSquared,LLC"
+                on_release:
+                    import webbrowser
+                    webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc/subscribe')   
+                
+            Button:
+                font_size: 75
+                background_color: 0, 0 , 0 , 1
+                size_hint_y: None
+                height: 400
+                text: "Donate to KSquared,LLC"
+                on_release:
+                    import webbrowser
+                    webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc/about-ksquared')
+            
 """)
 
 Builder.load_string("""
 <Quadratic_Formula_Solver>
     id:Quadratic_Formula_Solver
     name:"Quadratic_Formula_Solver"
-
     ScrollView:
         name: "Scroll"
         do_scroll_x: False
@@ -64,17 +130,17 @@ Builder.load_string("""
                 width:300
                 size_hint_y: None
                 height: self.minimum_height 
-
+                
                 Button:
-                    text: "Clear Entry"   
+                    text: "Menu"   
                     font_size: 75
                     size_hint_y: None
                     height: 200
                     padding: 10, 10
+                    background_color: 0, 0 , 1, 1
                     on_release:
-                        a.text = ""
-                        b.text = ""
-                        c.text = ""
+                        app.root.current = "Menu"
+                        root.manager.transition.direction = "right" 
                         
                 Button:
                     id: steps
@@ -88,7 +154,16 @@ Builder.load_string("""
                         a.text = ""
                         b.text = ""
                         c.text = ""
-                        list_of_steps.clear_widgets()            
+                        list_of_steps.clear_widgets()    
+            
+            Label:
+                height: 300
+                font_size: 75
+                size_hint_y: None
+                padding: 5,5
+                text:
+                    '''0 = ax\u00B2 + bx + c'''
+                    
             
             Label:
                 height: 300
@@ -100,77 +175,40 @@ Builder.load_string("""
                     x = -----------------------
                     '''      '''                2a'''
                     
-            BoxLayout:
-                cols: 2
-                id: steps
+            TextInput:
+                id: a
+                text: a.text
+                multiline: False
+                font_size: 125
                 size_hint_y: None
-                height: self.minimum_height 
-                padding: 5,5         
-        
-                Label:
-                    font_size: 75
-                    size_hint_y: None
-                    height: 200
-                    padding: 10, 10
-                    text: "a ="
-                                                        
-                TextInput:
-                    id: a
-                    text: a.text
-                    multiline: False
-                    font_size: 125
-                    size_hint_y: None
-                    height: 200
-                    padding: 10
-                    input_filter: lambda text, from_undo: text[:3 - len(a.text)]  
+                hint_text: "a ="
+                height: 200
+                padding: 10
+                input_filter: lambda text, from_undo: text[:3 - len(a.text)]  
                     
-            BoxLayout:
-                cols: 2
-                id: steps
+                                                 
+            TextInput:
+                id: b
+                text: b.text
+                multiline: False
+                hint_text: "b ="
+                font_size: 125
                 size_hint_y: None
-                height: self.minimum_height 
-                padding: 5,5        
-        
-                Label:
-                    font_size: 75
-                    size_hint_y: None
-                    height: 200
-                    padding: 10, 10
-                    text: "b ="
-                                                    
-                TextInput:
-                    id: b
-                    text: b.text
-                    multiline: False
-                    font_size: 125
-                    size_hint_y: None
-                    height: 200
-                    padding: 10          
-                    input_filter: lambda text, from_undo: text[:3 - len(b.text)]  
-                    
-            BoxLayout:
-                cols: 2
-                id: steps
+                height: 200
+                padding: 10          
+                input_filter: lambda text, from_undo: text[:3 - len(b.text)]  
+                
+    
+            TextInput:
+                id: c
+                text: c.text
+                multiline: False
+                hint_text: "c ="
+                font_size: 125
                 size_hint_y: None
-                height: self.minimum_height 
-                padding: 5,5        
-        
-                Label:
-                    font_size: 75
-                    size_hint_y: None
-                    height: 200
-                    padding: 10, 10
-                    text: "c ="
-                                                    
-                TextInput:
-                    id: c
-                    text: c.text
-                    multiline: False
-                    font_size: 125
-                    size_hint_y: None
-                    height: 200
-                    padding: 10          
-                    input_filter: lambda text, from_undo: text[:3 - len(c.text)]
+                height: 200
+                padding: 10          
+                input_filter: lambda text, from_undo: text[:3 - len(c.text)]
                     
             BoxLayout:
                 cols: 2
@@ -322,8 +360,12 @@ class Quadratic_Formula_Solver(Screen):
 class Homepage(Screen):
     pass            
            
+class Menu(Screen):
+    pass
+
 sm = ScreenManager()
 sm.add_widget(Homepage(name="Homepage"))
+sm.add_widget(Menu(name="Menu"))
 sm.add_widget(Quadratic_Formula_Solver(name="Quadratic_Formula_Solver"))     
 sm.current = "Homepage"   
 
@@ -334,5 +376,3 @@ class Quadratic_Formula_Solver(App):
 
 if __name__ == '__main__':
     Quadratic_Formula_Solver().run()
-    
-
