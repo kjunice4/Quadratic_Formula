@@ -220,10 +220,10 @@ Builder.load_string("""
 
 class Quadratic_Formula_Solver(Screen):
 	sm = ScreenManager()
-
+    
 	def __init__(self, **kwargs):
-    	super(Quadratic_Formula_Solver, self).__init__(**kwargs)
-    	Window.bind(on_keyboard=self._key_handler)
+        super(Quadratic_Formula_Solver,self).__init__(**kwargs)
+        Window.bind(on_keyboard=self._key_handler)
 
 	def _key_handler(self, instance, key, *args):
     	if key == 27:
