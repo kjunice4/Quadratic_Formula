@@ -183,10 +183,10 @@ Builder.load_string("""
             height: self.minimum_height
             
             Label:
-                font_size: 50
+                font_size: 75
                 size_hint_y: None
                 height: 200
-                text: "Quadratic Formula Solver"
+                text: "Quadratic Formula Calculator"
                 
             BoxLayout:
                 cols: 2
