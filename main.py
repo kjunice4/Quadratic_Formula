@@ -233,14 +233,14 @@ Builder.load_string("""
             
                 Label:
                     height: 250
-                    font_size: 75
+                    font_size: 50
                     size_hint_y: None
                     padding: 5,5
                     text: "ax\u00B2 + bx + c = 0"
                 
                 Label:
                     height: 250
-                    font_size: 75
+                    font_size: 50
                     size_hint_y: None
                     padding: 5,5
                     text:
@@ -356,7 +356,7 @@ class Quadratic_Formula_Solver(Screen):
                 
                 
                 #POSITIVE
-                self.ids.list_of_steps.add_widget(Label(text= "POSITIVE" ,font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "x1" ,font_size = 50, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
                 
                 ac = " - " + str(4*float(a)*float(c))
@@ -378,7 +378,7 @@ class Quadratic_Formula_Solver(Screen):
                 
                 answera = str(float(numer) / float(denom))
                 print("answera",answera)
-                self.ids.list_of_steps.add_widget(Label(text="x = " + answera ,font_size = 50, size_hint_y= None, height=150))
+                self.ids.list_of_steps.add_widget(Label(text="x1 = " + answera ,font_size = 50, size_hint_y= None, height=150))
                 self.layouts.append(layout)
                 self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = 50, size_hint_y= None, height=150))
                 
@@ -389,7 +389,7 @@ class Quadratic_Formula_Solver(Screen):
                 c = str(entry_list[2])
                 
                 #NEGATIVE
-                self.ids.list_of_steps.add_widget(Label(text= "NEGATIVE" ,font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "x2" ,font_size = 50, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
                 
                 ac = " - " + str(4*float(a)*float(c))
@@ -411,11 +411,11 @@ class Quadratic_Formula_Solver(Screen):
                 
                 answerb = str(float(numer) / float(denom))
                 print("answerb",answerb)
-                self.ids.list_of_steps.add_widget(Label(text="x = " + answerb ,font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="x1 = " + answerb ,font_size = 50, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = 50, size_hint_y= None, height=100))
                 self.ids.list_of_steps.add_widget(Label(text="FINAL ANSWER ",font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text="x = " + answera,font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text="x = " + answerb,font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="x1 = " + answera,font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="x2 = " + answerb,font_size = 50, size_hint_y= None, height=100))
                 self.layouts.append(layout)
                 
             
