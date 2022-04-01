@@ -165,6 +165,7 @@ Builder.load_string("""
             
 """)
 
+#Quadratic
 Builder.load_string("""
 <Quadratic_Formula_Solver>
     id:Quadratic_Formula_Solver
@@ -315,20 +316,7 @@ class Quadratic_Formula_Solver(Screen):
 
     def __init__(self, **kwargs):
         super(Quadratic_Formula_Solver, self).__init__(**kwargs)
-        Window.bind(on_keyboard=self._key_handler)
 
-    def _key_handler(self, instance, key, *args):
-        if key == 27:
-            print("Its working ESC = 27 LENGTH")
-            return True
-
-    def set_previous_screen(self):
-        print("Length is almost working")        
-        if sm.current != "Homepage":
-            print("Its working List")
-            sm.transition.direction = 'right'
-            sm.current = "Menu"
-            
     layouts = []
     def steps(self,entry):
         print("entry ",entry)
@@ -353,7 +341,6 @@ class Quadratic_Formula_Solver(Screen):
                 b_out = b_out.replace("--","")
                 b = str(entry_list[1])
                 c = str(entry_list[2])
-                
                 
                 #POSITIVE
                 self.ids.list_of_steps.add_widget(Label(text= "x1" ,font_size = 50, size_hint_y= None, height=100))
@@ -447,6 +434,16 @@ sm.current = "Homepage"
 
 
 class Quadratic_Formula_Solver(App):
+    def __init__(self, **kwargs):
+        super(Quadratic_Formula_Solver, self).__init__(**kwargs)
+        Window.bind(on_keyboard=self._key_handler)
+    
+    def _key_handler(self, instance, key, *args):
+        print("key:",key)
+        if key == 27:
+            sm.current = sm.current
+            return True
+    
     def build(app):
         return sm
 
