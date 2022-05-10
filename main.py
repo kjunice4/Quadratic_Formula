@@ -20,7 +20,7 @@ Builder.load_string("""
             	app.root.current = "Menu"
             	root.manager.transition.direction = "left"
         Button:
-            font_size: 50
+            font_size: '20sp'
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 200
@@ -30,7 +30,7 @@ Builder.load_string("""
                 root.manager.transition.direction = "left" 
         
         Button:
-            font_size: 50
+            font_size: '20sp'
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 100
@@ -40,7 +40,7 @@ Builder.load_string("""
                 root.manager.transition.direction = "left"        
         
         Button:
-            font_size: 50
+            font_size: '20sp'
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 100
@@ -70,7 +70,7 @@ Builder.load_string("""
         	height: self.minimum_height
        	 
         	Label:
-            	font_size: 75
+            	font_size: '20sp'
             	size_hint_y: None
             	height: 200
             	padding: 10, 10
@@ -78,7 +78,7 @@ Builder.load_string("""
        	 
         	Button:
             	text: "Quadratic Formula Calculator"   
-            	font_size: 75
+            	font_size: '20sp'
             	background_color: 0, 0 , 1 , 1
             	size_hint_y: None
             	height: 200
@@ -88,7 +88,7 @@ Builder.load_string("""
                 	root.manager.transition.direction = "left"
                	 
         	Button:
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
@@ -98,7 +98,7 @@ Builder.load_string("""
                     webbrowser.open('https://www.ksquaredmathematics.com/subscribe') 
                     
             Button:
-                font_size: 75
+                font_size: '20sp'
                 background_color: 1, 0, 1, 1
                 size_hint_y: None
                 height: 200
@@ -109,7 +109,7 @@ Builder.load_string("""
                     root.manager.transition.direction = "left"
                     
             Label:
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
@@ -118,8 +118,8 @@ Builder.load_string("""
             Image:
                 source: 'KSquared_QR.png'
                 size_hint_y: None
-                height: 1000
-                width: 1000
+                height: 800
+                width: 800
 """)
 
 #Updates
@@ -142,7 +142,7 @@ Builder.load_string("""
             height: self.minimum_height
             
             Label:
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
@@ -151,7 +151,7 @@ Builder.load_string("""
             Button:
                 id: steps
                 text: "Menu"   
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 background_color: 0, 0 , 1 , 1
                 height: 200
@@ -161,14 +161,14 @@ Builder.load_string("""
                     root.manager.transition.direction = "right" 
                     
             Label:
-                font_size: 40
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
                 text: "Quadratic Calculator v0.1"
                 
             Label:
-                font_size: 40
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
@@ -195,7 +195,7 @@ Builder.load_string("""
             height: self.minimum_height
             
             Label:
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 text: "Quadratic Formula Calculator"
@@ -211,7 +211,7 @@ Builder.load_string("""
                 
                 Button:
                     text: "Menu"   
-                    font_size: 75
+                    font_size: '20sp'
                     size_hint_y: None
                     height: 200
                     padding: 10, 10
@@ -223,7 +223,7 @@ Builder.load_string("""
                 Button:
                     id: steps
                     text: "Clear All"   
-                    font_size: 75
+                    font_size: '20sp'
                     size_hint_y: None
                     background_color: 1, 0 , 0 , 1
                     height: 200
@@ -244,15 +244,15 @@ Builder.load_string("""
                 height: self.minimum_height 
             
                 Label:
-                    height: 250
-                    font_size: 50
+                    height: 100
+                    font_size: '15sp'
                     size_hint_y: None
                     padding: 5,5
                     text: "ax\u00B2 + bx + c = 0"
                 
                 Label:
-                    height: 250
-                    font_size: 50
+                    height: 100
+                    font_size: '15sp'
                     size_hint_y: None
                     padding: 5,5
                     text:
@@ -264,7 +264,7 @@ Builder.load_string("""
                 id: a
                 text: a.text
                 multiline: False
-                font_size: 125
+                font_size: '20sp'
                 size_hint_y: None
                 hint_text: "a ="
                 height: 200
@@ -277,7 +277,7 @@ Builder.load_string("""
                 text: b.text
                 multiline: False
                 hint_text: "b ="
-                font_size: 125
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10          
@@ -289,7 +289,7 @@ Builder.load_string("""
                 text: c.text
                 multiline: False
                 hint_text: "c ="
-                font_size: 125
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10          
@@ -305,7 +305,7 @@ Builder.load_string("""
                 Button:
                     id: steps
                     text: "Calculate"   
-                    font_size: 75
+                    font_size: '20sp'
                     size_hint_y: None
                     background_color: 0, 1 , 0 , 1
                     height: 200
@@ -354,31 +354,31 @@ class Quadratic_Formula_Solver(Screen):
                 c = str(entry_list[2])
                 
                 #POSITIVE
-                self.ids.list_of_steps.add_widget(Label(text= "x1" ,font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "x1" ,font_size = '15sp', size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 ac = " - " + str(4*float(a)*float(c))
                 ac = ac.replace("- -","+ ")
                 b = str(float(b)**2)
                 
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + ac + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + str(square) + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + b + ac + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + \u221A(" + str(square) + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 squared = str(square**.5)
                 print("squared",squared)
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + " + squared + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " + " + squared + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 numer = str(float(b_out) + float(squared))
-                self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 denom = str(2 * float(a))
-                self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                     " + denom ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                     " + denom ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 answera = str(float(numer) / float(denom))
                 print("answera",answera)
-                self.ids.list_of_steps.add_widget(Label(text="x1 = " + answera ,font_size = 50, size_hint_y= None, height=150))
+                self.ids.list_of_steps.add_widget(Label(text="x1 = " + answera ,font_size = '15sp', size_hint_y= None, height=100))
                 self.layouts.append(layout)
-                self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = 50, size_hint_y= None, height=150))
+                self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = '15sp', size_hint_y= None, height=100))
                 
                 a = str(entry_list[0])
                 b_out = "-" + str(entry_list[1])
@@ -387,43 +387,43 @@ class Quadratic_Formula_Solver(Screen):
                 c = str(entry_list[2])
                 
                 #NEGATIVE
-                self.ids.list_of_steps.add_widget(Label(text= "x2" ,font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "x2" ,font_size = '15sp', size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b + "\u00B2 - 4" + "(" + a + ")(" + c + "))" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 ac = " - " + str(4*float(a)*float(c))
                 ac = ac.replace("- -","+ ")
                 b = str(float(b)**2)
                 
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b +  ac + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + str(square) + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + b +  ac + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - \u221A(" + str(square) + ")" + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 squared = str(square**.5)
                 print("squared",squared)
-                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - " + squared + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "        " + b_out + " - " + squared + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 numer = str(float(b_out) - float(squared))
-                self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                   2(" + a + ")" ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 denom = str(2 * float(a))
-                self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                     " + denom ,font_size = 50, size_hint_y= None, height=300))
+                self.ids.list_of_steps.add_widget(Label(text= "          " + numer + "\nx = -------------------------------" + "\n                     " + denom ,font_size = '15sp', size_hint_y= None, height=300))
                 
                 answerb = str(float(numer) / float(denom))
                 print("answerb",answerb)
-                self.ids.list_of_steps.add_widget(Label(text="x1 = " + answerb ,font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text="FINAL ANSWER ",font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text="x1 = " + answera,font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text="x2 = " + answerb,font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="x1 = " + answerb ,font_size = '15sp', size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" ,font_size = '15sp', size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="FINAL ANSWER ",font_size = '15sp', size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="x1 = " + answera,font_size = '15sp', size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text="x2 = " + answerb,font_size = '15sp', size_hint_y= None, height=100))
                 self.layouts.append(layout)
                 
             
             else:
-                self.ids.list_of_steps.add_widget(Label(text= "Invalid Square Root" ,font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "Invalid Square Root" ,font_size = '15sp', size_hint_y= None, height=100))
                 self.layouts.append(layout)
             
                             
         except Exception:
-            self.ids.list_of_steps.add_widget(Label(text= "Invalid Input" ,font_size = 50, size_hint_y= None, height=100))
+            self.ids.list_of_steps.add_widget(Label(text= "Invalid Input" ,font_size = '15sp', size_hint_y= None, height=100))
             self.layouts.append(layout)
        	 
    	 
