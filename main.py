@@ -244,14 +244,14 @@ Builder.load_string("""
                 height: self.minimum_height 
             
                 Label:
-                    height: 100
+                    height: 150
                     font_size: '15sp'
                     size_hint_y: None
                     padding: 5,5
                     text: "ax\u00B2 + bx + c = 0"
                 
                 Label:
-                    height: 100
+                    height: 150
                     font_size: '15sp'
                     size_hint_y: None
                     padding: 5,5
